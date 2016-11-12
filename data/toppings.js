@@ -29,7 +29,6 @@ function getAllToppings (callback) {
 function createTopping (name, preview_image, image, order) {
   let id = name.replace(/ /g, '_').toLowerCase(),
     topping = new Topping(id, name, preview_image, image, order);
-
   toppings[id] = topping;
 }
 
