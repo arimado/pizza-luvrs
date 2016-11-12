@@ -29,6 +29,7 @@ function attachHandlers () {
 
 function addTopping (id) {
   toppings[id].added = !toppings[id].added;
+  console.log('toppings: ', toppings)
   redrawPizza();
 }
 
@@ -60,6 +61,8 @@ function sendPizza () {
     name: document.getElementById('pizzaName').value,
     img: getPizzaImage()
   };
+
+  console.log('pkg: ', pkg);
 
   $.ajax({
     type: 'POST',
